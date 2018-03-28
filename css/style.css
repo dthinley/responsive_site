@@ -26,21 +26,22 @@ body{
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 }
 
-.nav-bar{
+/*.nav-bar{
 	background: rgba(0,0,0,0.5);
 	height: 80px;
 
-}
+}}*/
 
 .logo{
-	margin: 10px 80px;
+	margin: 10px 90px;
 	height: 60px;
+	color: #fff;
 }
 
 .menu {
 	float: right;
 	list-style: none;
-	margin: 20px;
+	margin: 20px 80px;
 }
 
 .menu li{
@@ -61,12 +62,13 @@ body{
 	background: #fff;
 	transition: 0.4s;
 	color: #000;
-}
 
+}
 .main-header{
 	width: 100%;
 	height: 500px;
 	background-image:linear-gradient(to left, #F09459, #e66586);
+	position: relative;
 
 }
 
@@ -81,7 +83,7 @@ body{
 
 .content h1{
 	margin-bottom: 10px;
-	line-height: 1.2em;
+	line-height: 2.2em;
 }
 
 .start{
@@ -274,6 +276,97 @@ body{
 
 /*Responsive section*/
 
+.hamburger {
+	display: none;
+	}
+.mobile-menu{
+	display: none;
+}
+
+@media(max-width: 900px){
+	.menu{
+		display: none;
+
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px 30px;
+	}
+
+	nav::after{
+		content:none;
+	}
+
+	nav.logo{
+		margin: 0;
+
+	}
+
+	.hamburger {
+	display: block;
+	cursor: pointer;
+
+	}
+
+	.hamburger .line{
+	width: 50px;
+	height: 5px;
+	display: block;
+	background-color: white;
+	margin: 8px auto;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+
+	}	
+
+	.hamburger.is-active .line:nth-child(2){
+		opacity: 0;
+	}
+
+	.hamburger.is-active .line:nth-child(1){
+		transform: translateY(13px) rotate(45deg);
+	}
+
+	.hamburger.is-active .line:nth-child(3){
+		transform: translateY(-13px) rotate(-45deg);
+	}
+
+	.mobile-menu{
+		background-color: grey;
+		box-sizing: border-box;
+		line-height: 28.9px;
+		list-style: none;
+		padding: 3px;
+
+
+	}
+
+	.mobile-menu ul{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		list-style: none;
+
+
+
+	}
+	.mobile-menu ul li:hover{
+		background-color: green;
+		
+	}
+
+	.mobile-menu ul li a{
+		color: white;
+		text-decoration: none;
+	}
+
+}
+
 @media(max-width: 900px){
 	.main-header{
 		height: 500px;
@@ -333,7 +426,7 @@ body{
 	}
 }
 
-@media(max-width: 575){
+@media(max-width: 900){
 
 	.features{
 		display: flex;
