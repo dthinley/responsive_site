@@ -10,18 +10,38 @@
 </head>
 <body>
 	
-		<div class="nav-bar">
-			<img src="img/logo.png" class ="logo">
+	<!--Navigation Section-->
+	<nav>
+		
+		<img src="img/logo.png" class ="logo">
 
-			<ul class="menu">
+			<div class="menu">
+				<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Services</a></li>
 				<li><a href="#">FAQ</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
-			
-		</div>
+			</div>
+
+	<div class="hamburger">
+		<span class="line"></span>
+		<span class="line"></span>
+		<span class="line"></span>
+	</div>	</nav>
+
+	<div class="mobile-menu">
+				<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			</div>
+
+
 
 		<header>
 			<div class="wrapper">
@@ -123,6 +143,12 @@
 		</section>
 
 	</div>
-
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(".hamburger").click(function(){
+	$(this).toggleClass("is-active");
+	$(".mobile-menu").toggle();
+});
+</script>
 </body>
 </html>
